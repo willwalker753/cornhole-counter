@@ -37,18 +37,27 @@ export default class Score extends Component {
             scoreBottom: 0,
         });
     }
+    doNothing = e => {
+        e.preventDefault();
+
+    }
     render() {
         return (
             <div id='score-box'>
                 <div className='score'>
-                    <p>TEAM 1 <i className="far fa-edit"></i></p>
-
+                    <form onSubmit={this.doNothing}>
+                        <input type='text' placeholder='TEAM 1'></input>
+                        <i className="far fa-edit"></i>
+                    </form>
                     <div className='buttons'>
                         <button className='button-left' onClick={() => this.score('top','sub')}>-</button>
                         <button className='button-center'>{this.state.scoreTop}</button>
                         <button className='button-right' onClick={() => this.score('top','add')}>+</button>
                     </div>
-                    <p>TEAM 2 <i className="far fa-edit"></i></p>
+                    <form onSubmit={this.doNothing}>
+                        <input type='text' placeholder='TEAM 2'></input>
+                        <i className="far fa-edit"></i>
+                    </form>
                     <div className='buttons'>
                         <button className='button-left' onClick={() => this.score('bottom','sub')}>-</button>
                         <button className='button-center'>{this.state.scoreBottom}</button>
