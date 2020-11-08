@@ -12,13 +12,13 @@
 }
 .score {
   text-align: center;
-  margin-top: 30px;
 }
 .score > form > input {
   margin-left: 28px;
   width: 52vw;
   border: none;
   margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 20px;
   text-align: center;
   background-color:rgba(14, 31, 44, 0.616);
@@ -44,6 +44,9 @@
 }
 .buttons {
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .button-center, .button-left, .button-right{
   height: 30vh;
@@ -66,9 +69,11 @@
   border-radius: 10px 0px 0px 10px;
 }
 .button-center {
-  width: 50vw;
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
   font-size: 50px;
-  background-color: rgba(255, 0, 0, 0);
+  background-color: rgba(17, 37, 53, 0.705);
   text-shadow: 3px 3px 3px rgb(41, 41, 41);
   color: white;
   font-size: 70px;
@@ -78,7 +83,7 @@
   border-radius: 28px;
   height: 55px;
   width: 55px;
-  position: absolute;
+  position: fixed;
   bottom: 15px;
   left: 20px;
   border: none;
@@ -86,4 +91,8 @@
   background-color: rgba(255, 0, 0, 0.308);
   text-shadow: 2px 2px 3px rgb(0, 0, 0);
   outline: none;  
+}
+
+@media only screen and (min-width: 600px) {
+
 }
